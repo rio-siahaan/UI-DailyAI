@@ -22,7 +22,11 @@ form.addEventListener("submit", async (e) => {
     formData.append("message", text);
     if (image) formData.append("image", image);
 
-    const response = await fetch("http://127.0.0.1:5001/chat", {
+    // const response = await fetch("http://127.0.0.1:5001/chat", {
+    //   method: "POST",
+    //   body: formData,
+    // });
+    const response = await fetch("https://bagustenan-dailyai.hf.space/chat", {
       method: "POST",
       body: formData,
     });
@@ -193,7 +197,12 @@ async function handleSaveHabit(cardId, habitDataEncoded) {
   };
 
   try {
-    const response = await fetch("http://127.0.0.1:5001/save-habit", {
+    // const response = await fetch("http://127.0.0.1:5001/save-habit", {
+    //   method: "POST",
+    //   headers: { "Content-Type": "application/json" },
+    //   body: JSON.stringify(payload),
+    // });
+    const response = await fetch("https://bagustenan-dailyai.hf.space/save-habit", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(payload),
