@@ -1,0 +1,205 @@
+/* RESET DASAR */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+body {
+  background: #f5f6fa;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+/* Judul di tengah atas */
+.app-title {
+  width: 100%;
+  text-align: center;
+  margin: 20px 0;
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #333;
+}
+
+/* Wrapper utama */
+.chat-wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Chat container */
+.chat-container {
+  width: 80%;
+  max-width: 800px;
+  height: 75vh;
+  background: #f5f6fa; /* Sama dengan background body */
+  border: 1px solid #ddd;
+  border-radius: 14px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Area chat */
+.chat-box {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+/* Pesan */
+.message {
+  padding: 10px 14px;
+  border-radius: 12px;
+  max-width: 75%;
+  word-wrap: break-word;
+  line-height: 1.4;
+}
+
+.user-message {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.user-message .message {
+  background: #4a69bd;
+  color: white;
+  border-bottom-right-radius: 3px;
+}
+
+.bot-message {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.bot-message .message {
+  background: #dcdde1;
+  color: #333;
+  border-bottom-left-radius: 3px;
+}
+
+/* Scrollbar */
+.chat-box::-webkit-scrollbar {
+  width: 6px;
+}
+
+.chat-box::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
+}
+
+/* Input area */
+.chat-input {
+  display: flex;
+  align-items: center;
+  border-top: 1px solid #ddd;
+  padding: 10px;
+  background: #f5f6fa;
+  gap: 10px;
+}
+
+.chat-input textarea {
+  flex: 1;
+  resize: none;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 1rem;
+  outline: none;
+  min-height: 40px;
+  max-height: 100px;
+  background: white;
+}
+
+.icon-btn {
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: #4a69bd;
+  transition: 0.2s;
+}
+
+.icon-btn:hover {
+  transform: scale(1.1);
+}
+
+.send-btn {
+  background: #4a69bd;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 14px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.send-btn:hover {
+  background: #3c56a0;
+}
+
+/* Gambar dalam chat */
+img.chat-image {
+  max-width: 200px;
+  border-radius: 10px;
+  margin-top: 5px;
+}
+
+.activity-card {
+background: #f8f8f8;
+  padding: 10px 14px;
+  border-radius: 12px;
+  margin: 10px 0;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+  max-width: 90%;
+  word-wrap: break-word;
+}
+
+.habit-good {
+  color: #16a34a;
+  font-weight: bold;
+}
+
+.habit-bad {
+  color: #dc2626;
+  font-weight: bold;
+}
+
+.divider {
+  border: none;
+  border-top: 1px dashed #ddd;
+  margin: 12px 0;
+}
+
+.save-btn-container {
+  text-align: right;
+  margin-top: 8px;
+}
+
+.save-btn {
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  padding: 6px 12px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: background 0.2s;
+}
+
+.save-btn:hover {
+  background-color: #0056b3;
+}
+
+.save-btn.saved {
+  background-color: #28a745;
+  cursor: default;
+}
